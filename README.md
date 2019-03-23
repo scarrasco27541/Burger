@@ -1,3 +1,3 @@
 # Burger
 
-Please visit [https://github.com/scarrasco27541/Burger](https://github.com/scarrasco27541/Burger) to demo.
+Please visit [https://secure-earth-20316.herokuapp.com/](https://secure-earth-20316.herokuapp.com/) to demo.
