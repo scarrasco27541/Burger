@@ -9,3 +9,19 @@ const orm = require("../config/orm");
 //burgers.devour(3);
 //burgers.add("Bacon Double Cheese");
 //burgers.getAll(function(x) { console.log(x); });
+
+const burger = {
+	addBurger: (burgerName, callback) => {
+		orm.insertOne("burgers", ["burger_name"], [burgerName], callback);
+	}
+	,
+	devourBurger: (id, callback) => {
+		orm.updateOne("burgers", {devoured:true}, "id="+id, callback);
+	}
+	,
+	getBurgers: (callback) => {
+		orm.selectAll("burgers", callback);
+	}
+}
+
+module.exports = burger;

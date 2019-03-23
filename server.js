@@ -1,20 +1,13 @@
-const express = require("express");
+const PORT = process.env.PORT || 8080;
 
-/*
-var mysql = require("mysql");
+const express = require("express")
+const path = require("path");
 
-var connection = mysql.createConnection({
-  host: "localhost",
+var app = express();
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+require("./controllers/burgers_controller")(app);
 
-  // Your port; if not 3306
-  port: 3306,
-
-  // Your username
-  user: "root",
-
-  // Your password
-  password: "UNC1964",
-  database: "playlistDB"
+app.listen(PORT, function() {
+  console.log("App listening on PORT: " + PORT);
 });
-
-*/
