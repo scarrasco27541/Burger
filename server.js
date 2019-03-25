@@ -25,7 +25,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 // https://expressjs.com/en/starter/static-files.html
 // This line sets 'public' as a static location that routes the 'normal' way
-//app.use(express.static('public'))
+app.use(express.static('public'))
 // ---
 
 
