@@ -6,7 +6,7 @@ function devourBurger(b) {
 	$("#button_"+b).remove();
 	$("#devoured").append($("#burger_"+b));
 	$.get( "/burger/eat/"+b, function( data ) {
-	  $( ".result" ).html( data );
+		// do nothing with our data... we just saved stuff
 	});
 }
 </script>
@@ -36,7 +36,7 @@ function devourBurger(b) {
 	{{#each burgers}}
 		{{#if devoured}}
 			<div id='burger_{{id}}' class='burger devoured'>
-			<label>{{burger_name}}</label>
+				<label>{{burger_name}}</label>
 			</div>
 		{{/if}}
 	{{/each}}

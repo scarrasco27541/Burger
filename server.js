@@ -6,7 +6,8 @@ const path = require("path");
 var app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-require("./controllers/burgers_controller")(app);
+var burgerController = require("./controllers/burgers_controller");
+burgerController(app);
 
 // ---
 // HELP FROM:
@@ -25,6 +26,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 // https://expressjs.com/en/starter/static-files.html
 // This line sets 'public' as a static location that routes the 'normal' way
+// For example, even without routing, '/this/folder/file.txt' will bring up file.txt an display it
 app.use(express.static('public'))
 // ---
 
